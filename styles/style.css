@@ -1,3 +1,85 @@
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.tree {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tree:nth-of-type(1) {
+  right: -100px;
+}
+
+.tree:nth-of-type(2) {
+  position: relative;
+  right: -50px;
+}
+
+.tree:nth-of-type(3) {
+  right: 0px;
+}
+
+.tree:nth-of-type(4) {
+  right: 50px;
+}
+
+.tree:nth-of-type(5) {
+  right: 100px;
+}
+
+.tree:nth-of-type(6) {
+  right: 150px;
+}
+
+.tree:nth-of-type(7) {
+  right: -100px;
+}
+
+.tree:nth-of-type(8) {
+  right: -50px;
+}
+
+.tree:nth-of-type(9) {
+  right: 0px;
+}
+
+.tree:nth-of-type(10) {
+  right: 50px;
+}
+
+.tree:nth-of-type(11) {
+  right: 100px;
+}
+
+.tree:nth-of-type(12) {
+  right: 150px;
+}
+
+.tree:hover {
+  animation: shake 0.5s;
+  transition: 0.5s;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -45,9 +127,8 @@ p {
 .intro-forest {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 150px;
-  height: 150px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #scene1 {
