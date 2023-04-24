@@ -1,9 +1,58 @@
+.intro-forest {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scene1__tree {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.scene1__tree .tree__leaf {
+  background-color: #98482b;
+}
+
+.intro-forest .scene1__tree .tree__leaf:nth-of-type(1),
+.intro-forest .scene1__tree .tree__leaf:nth-of-type(2),
+.intro-forest .scene1__tree .tree__leaf:nth-of-type(3) {
+  border-radius: 25%;
+}
+
+.scene1__tree .tree__leaf:nth-of-type(1) {
+  width: 50px;
+  height: 25px;
+}
+
+.scene1__tree .tree__leaf:nth-of-type(2) {
+  width: 75px;
+  height: 50px;
+  left: -12.5px;
+}
+
+.scene1__tree .tree__leaf:nth-of-type(3) {
+  width: 80px;
+  height: 60px;
+}
+
+.tree__trunk {
+  background-color: black;
+  width: 10px;
+  height: 80px;
+  position: absolute;
+  top: 135px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: white;
-  background-color: rgb(3, 83, 3);
+  background-color: rgb(45, 117, 45);
   margin: 0;
   padding: 0;
 }
@@ -18,6 +67,7 @@ h1 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
+  padding: 20px;
 }
 
 h2 {
@@ -34,4 +84,27 @@ p {
   padding: 20px;
   margin: 0 auto;
   max-width: 1000px;
+}
+
+.scene {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#scene1 {
+  background-color: rgb(43, 159, 43);
+}
+
+#scene2 {
+  background-color: rgb(23, 133, 23);
+}
+
+#scene3 {
+  background-color: rgb(16, 113, 16);
+}
+
+#scene4 {
+  background-color: rgb(8, 96, 8);
 }/*# sourceMappingURL=style.css.map */

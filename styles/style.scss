@@ -1,38 +1,63 @@
 @import "./variables";
 @import "./mixins";
+@import "./intro-forest";
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: white;
-    background-color: rgb(3, 83, 3);
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  background-color: $primaryGreen;
+  margin: 0;
+  padding: 0;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-    @include center;
-    font-size: 2.5rem;
-    font-weight: 700;
+  @include center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 20px;
 }
 
 h2 {
-    @include center;
-    font-size: 2rem;
-    font-weight: 700;
+  @include center;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    height: 100vh;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1000px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.scene {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#scene1 {
+  background-color: rgb(43, 159, 43);
+}
+
+#scene2 {
+  background-color: rgb(23, 133, 23);
+}
+
+#scene3 {
+  background-color: rgb(16, 113, 16);
+}
+
+#scene4 {
+  background-color: rgb(8, 96, 8);
 }
