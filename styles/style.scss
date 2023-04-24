@@ -1,6 +1,5 @@
 @import "./variables";
 @import "./mixins";
-@import "./intro-forest";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -33,7 +32,6 @@ h2 {
 p {
   font-size: 1.2rem;
   font-weight: 400;
-  height: 100vh;
   padding: 20px;
   margin: 0 auto;
   max-width: 1000px;
@@ -43,7 +41,14 @@ p {
   height: 100vh;
   width: 100%;
   position: relative;
-  overflow: hidden;
+}
+
+.intro-forest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 150px;
+  height: 150px;
 }
 
 #scene1 {
