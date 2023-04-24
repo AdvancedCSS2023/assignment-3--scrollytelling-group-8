@@ -50,7 +50,9 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  
+  margin: 0 auto;
+  max-width: 1000px;
+  bottom: 100px;
 }
 
 #scene1 {
