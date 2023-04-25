@@ -18,6 +18,17 @@
     transform: rotate(0deg);
   }
 }
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .tree {
   width: 200px;
   height: 200px;
@@ -26,6 +37,26 @@
 .tree:hover {
   animation: shake 0.5s;
   transition: 0.5s;
+}
+
+.bulldozer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.bulldozer-left {
+  transform: translateX(-100%);
+}
+
+.bulldozer-right {
+  transform: translateX(100%);
+}
+
+.animate {
+  animation: animate 10s infinite reverse;
 }
 
 body {
