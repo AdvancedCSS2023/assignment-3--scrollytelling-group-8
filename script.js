@@ -11,14 +11,18 @@ const observer = new IntersectionObserver(
         // Tree is in view, start the animation
         gsap.to(bulldozerLeft, {
           duration: 2,
-          x: "50%",
+          x: "100%",
+          repeat: -1,
+          yoyo: true,
           ease: "power1.out",
         });
 
         gsap.to(bulldozerRight, {
           duration: 2,
-          x: "50%",
+          x: "100%",
           ease: "power1.out",
+          repeat: -1,
+          yoyo: true,
           delay: 1,
         });
       } else {
