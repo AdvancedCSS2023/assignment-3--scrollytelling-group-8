@@ -1,20 +1,8 @@
-.bulldozer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-}
+.bulldozer-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-.bulldozer-left {
-    transform: translateX(-100%);
-}
-
-.bulldozer-right {
-    transform: translateX(100%);
-}
-
-.animate {
-    animation: animate 10s infinite reverse;
-}
 
