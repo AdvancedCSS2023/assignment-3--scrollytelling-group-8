@@ -4,6 +4,7 @@ What the project does?
 
 Why the project is useful?
 
+The goal of this website is to create a 
 
 How users can get started with the project?
 
