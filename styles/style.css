@@ -31,8 +31,21 @@
 .bulldozer-container {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
+}
+
+.bulldozer {
+  width: 400px;
+  height: 400px;
+  transform: translateX(-50%);
+}
+
+.bulldozer-left {
+  left: -200px;
+}
+
+.bulldozer-right {
+  right: -200px;
 }
 
 body {
@@ -74,8 +87,8 @@ p {
 }
 
 .scene {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   position: relative;
 }
 
