@@ -1,42 +1,33 @@
-const treeContainer = document.querySelector(".tree-container");
-const trees = document.querySelectorAll(".tree");
+const bulldozerContainer = document.querySelector(".bulldozer-container");
 const bulldozers = document.querySelectorAll(".bulldozer");
-const bulldozerLeft = document.querySelector(".bulldozer-left");
-const bulldozerRight = document.querySelector(".bulldozer-right");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Tree is in view, start the animation
-        gsap.to(bulldozerLeft, {
-          duration: 2,
-          x: "100%",
-          repeat: -1,
-          yoyo: true,
-          ease: "power1.out",
-        });
-
-        gsap.to(bulldozerRight, {
-          duration: 2,
-          x: "100%",
-          ease: "power1.out",
-          repeat: -1,
-          yoyo: true,
-          delay: 1,
+        // Bulldozer container is in view, start the animation
+        bulldozers.forEach((bulldozer) => {
+          gsap.to(bulldozer, {
+            duration: 10,
+            x: "500%",
+            repeat: -1,
+            ease: "power1.out",
+            onUpdate: function () {
+              console.log("Bulldozer Left is animating");
+            },
+          });
         });
       } else {
-        // Tree is out of view, stop the animation
+        // Bulldozer container is out of view, stop the animation
         bulldozers.forEach((bulldozer) => {
-          bulldozer.classList.remove("animate");
+          gsap.killTweensOf(bulldozer);
         });
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0 }
 );
 
-// Observe each tree
-trees.forEach((tree) => {
-  observer.observe(tree);
-});
+// Observe the bulldozer container
+observer.observe(bulldozerContainer);
+console.log(observer);
