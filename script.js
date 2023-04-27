@@ -8,10 +8,10 @@ const observer = new IntersectionObserver(
         // Bulldozer container is in view, start the animation
         bulldozers.forEach((bulldozer) => {
           gsap.to(bulldozer, {
-            duration: 10,
-            x: "500%",
+            duration: 6,
+            x: "450%",
             repeat: -1,
-            ease: "power1.out",
+            ease: "Power0.easeInOut",
             onUpdate: function () {
               console.log("Bulldozer Left is animating");
             },
@@ -25,9 +25,37 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0 }
+  { threshold: 0.5 }
 );
 
 // Observe the bulldozer container
 observer.observe(bulldozerContainer);
 console.log(observer);
+
+// for scene2
+const plowContainer = document.querySelector(".plow-container");
+const tractor = document.querySelector(".tractor");
+
+const detection = new IntersectionObserver(
+  (entries, detection) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        gsap.to(tractor, {
+          duration: 3,
+          x: "-250%",
+          repeat: -1,
+          ease: "Power0.easeInOut",
+          onUpdate: function () {
+            console.log("Tractor is moving");
+          },
+        });
+      } else {
+        // Tractor is out of view, stop the animation
+        gsap.killTweensOf(tractor);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+detection.observe(plowContainer);

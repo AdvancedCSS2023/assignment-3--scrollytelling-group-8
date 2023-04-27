@@ -28,26 +28,6 @@
   transition: 0.5s;
 }
 
-.bulldozer-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.bulldozer {
-  width: 400px;
-  height: 400px;
-  transform: translateX(-50%);
-}
-
-.bulldozer-left {
-  left: -200px;
-}
-
-.bulldozer-right {
-  right: -200px;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -106,7 +86,7 @@ p {
 }
 
 #scene2 {
-  background-color: rgb(23, 133, 23);
+  background-color: rgb(184, 191, 49);
 }
 
 #scene3 {
@@ -115,4 +95,30 @@ p {
 
 #scene4 {
   background-color: rgb(8, 96, 8);
+}
+
+.bulldozer-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bulldozer {
+  width: 400px;
+  height: 300px;
+  transform: translateX(-350%);
+}
+
+.plow-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.tractor {
+  width: 600x;
+  height: 600px;
 }/*# sourceMappingURL=style.css.map */
