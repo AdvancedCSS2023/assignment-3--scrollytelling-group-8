@@ -82,6 +82,10 @@ p {
 }
 
 .plow-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   position: relative;
   overflow: hidden;
   
@@ -90,7 +94,7 @@ p {
 .tractor {
   width: 600x;
   height: 600px;
-  float: right;
+
 };
 
 
