@@ -49,6 +49,7 @@ h1 {
   font-size: 2.5rem;
   font-weight: 700;
   padding: 20px;
+  margin: 50px;
 }
 
 h2 {
@@ -68,7 +69,7 @@ p {
 
 .scene {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   position: relative;
 }
 
