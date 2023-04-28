@@ -59,3 +59,17 @@ const detection = new IntersectionObserver(
 );
 
 detection.observe(plowContainer);
+
+// for scene3
+window.addEventListener('scroll', function() {
+  const parallax = document.querySelector('.parallax');
+  const background = parallax.querySelector('.background');
+  const middle = parallax.querySelector('.middle');
+  const foreground = parallax.querySelector('.foreground');
+  
+  const scrollY = window.scrollY;
+  
+  background.style.transform = 'translateY(' + scrollY * 0.2 + 'px)';
+  middle.style.transform = 'translateY(' + scrollY * 0.5 + 'px)';
+  foreground.style.transform = 'translateY(' + scrollY * 0.8 + 'px)';
+});

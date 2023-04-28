@@ -8,9 +8,10 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: white;
-  background-color: $primaryGreen;
+  height: 100%;
   margin: 0;
   padding: 0;
+  text-shadow: 1px 1px 2px grey, 0 0 1px grey, 0 0 0.2px grey;
 }
 
 * {
@@ -42,7 +43,6 @@ p {
 
 .scene {
   width: 100%;
-  height: 120vh;
   position: relative;
 }
 
@@ -53,22 +53,6 @@ p {
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 1000px;
-}
-
-#scene1 {
-  background-color: rgb(43, 159, 43);
-}
-
-#scene2 {
-  background-color: rgb(184, 191, 49);
-}
-
-#scene3 {
-  background-color: rgb(16, 113, 16);
-}
-
-#scene4 {
-  background-color: rgb(8, 96, 8);
 }
 
 .bulldozer-container {
@@ -99,3 +83,147 @@ p {
 };
 
 
+.parallax {
+  position: relative;
+  height: 100vh;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/rainforest.jpg);
+  background-size: cover;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middle img {
+  width: 200px;
+  height: auto;
+}
+
+.foreground {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.foreground h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.foreground p {
+  font-size: 1.5em;
+}
+
+.parallax {
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+.scene {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective-origin: center top;
+}
+
+.scene section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.scene section:nth-child(even) {
+  transform: translateZ(-1px) scale(2);
+}
+
+.intro-forest {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.intro-forest .tree {
+  width: 30%;
+  margin: 0 1rem;
+  transform-style: preserve-3d;
+  animation: treeAnimation 20s infinite linear;
+}
+
+@keyframes treeAnimation {
+  0% {
+    transform: translateY(0) rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: translateY(-1000px) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+.scene__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.scene__text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.scene__text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.scene__text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
