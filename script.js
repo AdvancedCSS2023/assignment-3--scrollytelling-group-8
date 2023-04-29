@@ -59,3 +59,10 @@ const detection = new IntersectionObserver(
 );
 
 detection.observe(plowContainer);
+
+const waterContainer = document.querySelector('.water-container');
+
+const options = {
+  rootMargin: '0px',
+  threshold: 0.5
+}

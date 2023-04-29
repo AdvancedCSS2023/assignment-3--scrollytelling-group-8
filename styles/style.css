@@ -18,6 +18,17 @@
     transform: rotate(0deg);
   }
 }
+@keyframes water-bobbing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .tree {
   width: 200px;
   height: 200px;
@@ -121,4 +132,36 @@ p {
 .tractor {
   width: 600x;
   height: 600px;
+}
+
+.water-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10000px;
+  overflow: hidden;
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 500px;
+  background: linear-gradient(to bottom, #92bde7, #1d64b9);
+  overflow: hidden;
+  animation: water-bobbing 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.water::before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.2);
+  transform: skewY(-20deg);
 }/*# sourceMappingURL=style.css.map */
