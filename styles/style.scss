@@ -79,5 +79,27 @@ body {
   display: block;
 }
 
+.section3:hover .description {
+  display: block;
+}
+
+.section4:hover .description {
+  display: block;
+}
+
+.section5:hover .description {
+  display: block;
+}
+
+.bulldozer-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.bulldozer {
+  width: 400px;
+  height: 300px;
+  transform: translateX(-350%);
+}
 
 
