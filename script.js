@@ -31,3 +31,30 @@ const observer = new IntersectionObserver(
 // Observe the bulldozer container
 observer.observe(bulldozerContainer);
 console.log(observer);
+
+// for scene2
+const plowContainer = document.querySelector(".plow-container");
+const tractor = document.querySelector(".tractor");
+
+const detection = new IntersectionObserver(
+  (entries, detection) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        gsap.to(tractor, {
+          duration: 5,
+          x: "-250%",
+          ease: "Power0.easeInOut",
+          onUpdate: function () {
+            console.log("Tractor is moving");
+          },
+        });
+      } else {
+        // Tractor is out of view, stop the animation
+        gsap.killTweensOf(tractor);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+detection.observe(plowContainer);
