@@ -30,7 +30,6 @@ const observer = new IntersectionObserver(
 
 // Observe the bulldozer container
 observer.observe(bulldozerContainer);
-console.log(observer);
 
 // for scene2
 const plowContainer = document.querySelector(".plow-container");

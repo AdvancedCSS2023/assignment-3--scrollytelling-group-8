@@ -119,3 +119,11 @@ body {
   width: 600px;
   height: 600px;
 }
+
+.image {
+  width: 500px;
+  height: 500px;
+  bottom: 0;
+  left: 10px;
+  object-fit: cover;
+}
