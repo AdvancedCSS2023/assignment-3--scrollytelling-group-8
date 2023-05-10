@@ -1,5 +1,5 @@
-const bulldozerContainer = document.querySelector(".bulldozer-container");
-const bulldozers = document.querySelectorAll(".bulldozer");
+const bulldozerContainer = document.querySelector(".section__bulldozer-container");
+const bulldozers = document.querySelectorAll(".section__image--bulldozer");
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
@@ -32,8 +32,8 @@ const observer = new IntersectionObserver(
 observer.observe(bulldozerContainer);
 
 // for scene2
-const plowContainer = document.querySelector(".plow-container");
-const tractor = document.querySelector(".tractor");
+const plowContainer = document.querySelector(".section__tractor-container");
+const tractor = document.querySelector(".section__image--tractor");
 
 const detection = new IntersectionObserver(
   (entries, detection) => {
