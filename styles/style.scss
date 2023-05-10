@@ -86,6 +86,7 @@ body {
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y: scroll;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .section {
   width: 100%;
@@ -122,11 +123,21 @@ body {
 }
 
 .section__text {
+  display: flex;
+  justify-content: center; 
+  color: white;
+  font-size: 4rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+    5px 5px 70px rgba(255, 255, 255, 0.5);
+  font-weight: 1000;
+}
+
+.section__text--header {
   top: 30%;
   left: 50%;
   position: absolute;
   text-align: center;
-  font-family: "Franklin Gothic Heavy";
+  font-family: "Roboto", sans-serif;
   font-size: 5vw;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
@@ -151,19 +162,19 @@ body {
   text-align: justify;
 }
 
-.section2:hover .description {
+.section2:hover .section__description {
   display: block;
 }
 
-.section3:hover .description {
+.section3:hover .section__description {
   display: block;
 }
 
-.section4:hover .description {
+.section4:hover .section__description {
   display: block;
 }
 
-.section5:hover .description {
+.section5:hover .section__description {
   display: block;
 }
 
@@ -194,4 +205,29 @@ body {
   bottom: 0;
   left: 10px;
   object-fit: cover;
+}
+
+.section__animal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.section__image--animal {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.section__image--animal:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0); }
+  20% { transform: translate(-10px, 0) rotate(-5deg); }
+  40% { transform: translate(10px, 0) rotate(5deg); }
+  60% { transform: translate(-10px, 0) rotate(-5deg); }
+  80% { transform: translate(10px, 0) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0); }
 }
