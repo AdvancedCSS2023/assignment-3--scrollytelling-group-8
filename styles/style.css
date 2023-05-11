@@ -230,17 +230,13 @@ body {
     transform: translate(0, 0) rotate(0);
   }
   20% {
-    transform: translate(-10px, 0) rotate(-5deg);
+    transform: translate(-15px, 0) rotate(-5deg);
   }
-  40% {
-    transform: translate(10px, 0) rotate(5deg);
-  }
+  /*  40% { transform: translate(10px, 0) rotate(5deg); } */
   60% {
-    transform: translate(-10px, 0) rotate(-5deg);
+    transform: translate(15px, 0) rotate(5deg);
   }
-  80% {
-    transform: translate(10px, 0) rotate(5deg);
-  }
+  /*  80% { transform: translate(10px, 0) rotate(5deg); } */
   100% {
     transform: translate(0, 0) rotate(0);
   }
