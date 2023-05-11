@@ -171,21 +171,14 @@ body {
   text-align: justify;
 }
 
-.section2:hover .section__description {
+.section2:hover .section__description,
+.section3:hover .section__description, 
+.section4:hover .section__description, 
+.section4:hover .section__description 
+{
   display: block;
 }
 
-.section3:hover .section__description {
-  display: block;
-}
-
-.section4:hover .section__description {
-  display: block;
-}
-
-.section5:hover .section__description {
-  display: block;
-}
 
 .section__bulldozer-container {
   display: flex;
