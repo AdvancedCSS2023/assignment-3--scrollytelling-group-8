@@ -24,6 +24,7 @@ $maingreen: rgb(18, 76, 8);
 $maindarkdirt: rgb(68, 35, 19);
 $mainlightdirt: rgb(111, 48, 16);
 $mainpuple: rgb(40, 42, 124);
+$mainback: #222;
 
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -164,7 +165,7 @@ body {
   max-width: 600px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.9);
-  color: #222;
+  color: $mainback;
   font-size: 1.2em;
   line-height: 1.5;
   text-align: justify;
