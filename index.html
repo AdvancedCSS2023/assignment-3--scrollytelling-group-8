@@ -3,75 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <title>Scrollytelling Website</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" href="./images/goal_15.png" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="icon" href="/images/goal_15.png" />
     <script src="script.js" defer></script>
-    <script src="./gsap-public/minified/gsap.min.js"></script>
-    
   </head>
   <body>
-    <div class="section section1">
-      <div class="section__text section__text--header">UN Goal 15: Life on Land</div>
-    </div>
-    
-    <div class="section section2">
-      <div class="section__text">Agriculture and Deforestation</div>
-      <div class="section__description">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-          enim id libero congue dapibus. Sed vel nunc vitae mi tincidunt
-          sodales. Aenean hendrerit vel massa id tincidunt. Fusce tempor odio ut
-          bibendum dapibus. Sed ac aliquam lectus, sed malesuada erat.
+    <section class="intro">
+      <div class="intro__image"></div>
+      <div class="intro__text">
+        <h1 class="intro__title">Deforestation: A Global Crisis</h1>
+        <p class="intro__description">
+          Deforestation is one of the biggest environmental issues facing our
+          planet. Scroll down to learn more about the causes, consequences, and
+          solutions to deforestation.
         </p>
       </div>
-      <div class="section__tractor-container">
-        <img class="section__image section__image--tractor" src="./images/tractor.svg" alt="A picture of a tractor" />
-      </div>
-    </div>
-    
-    <div class="section section3">
-      <div class="section__text">10 Million Hectares of Forest Destroyed Every Year</div>
-      <div class="section__description">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-          enim id libero congue dapibus. Sed vel nunc vitae mi tincidunt
-          sodales. Aenean hendrerit vel massa id tincidunt. Fusce tempor odio ut
-          bibendum dapibus. Sed ac aliquam lectus, sed malesuada erat.
-        </p>
-      </div>
-      <div class="section__bulldozer-container">
-        <img class="section__image section__image--bulldozer" src="./images/bulldozer-left.svg" alt="Bulldozer" />
-        <img class="section__image section__image--bulldozer" src="./images/bulldozer-left.svg" alt="Bulldozer" />
-        <img class="section__image section__image--bulldozer" src="./images/bulldozer-left.svg" alt="Bulldozer" />
+    </section>
+
+    <div class="excavators">
+      <div class="excavators__image animate"></div>
+      <div class="excavators__text animate">
+        <h2>Scene 1</h2>
+        <p>Text about excavators coming into the forest</p>
       </div>
     </div>
     
-    <div class="section section4">
-      <div class="section__text">Endangered Animals</div>
-      <div class="section__description">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-          enim id libero congue dapibus. Sed vel nunc vitae mi tincidunt
-          sodales. Aenean hendrerit vel massa id tincidunt. Fusce tempor odio ut
-          bibendum dapibus. Sed ac aliquam lectus, sed malesuada erat.
-        </p>
-      </div>
-      <div class="section__animal-container">
-        <img class="section__image section__image--animal" src="images/fox.svg" alt="A drawing of a fox">
-        <img class="section__image section__image--animal" src="images/elephant.svg" alt="A drawing of a elephant">
-        <img class="section__image section__image--animal" src="images/monkey.svg" alt="A drawing of a monkey">
+    <div class="cutting">
+      <div class="cutting__image"></div>
+      <div class="cutting__text">
+        <h2>Scene 2</h2>
+        <p>Text about the forest being cut down</p>
       </div>
     </div>
-    <div class="section section5">
-      <div class="section__text">Positive Efforts in Saving Biodiversity</div>
-      <div class="section__description">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-          enim id libero congue dapibus. Sed vel nunc vitae mi tincidunt
-          sodales. Aenean hendrerit vel massa id tincidunt. Fusce tempor odio ut
-          bibendum dapibus. Sed ac aliquam lectus, sed malesuada erat.
-        </p>
+    
+    <div class="agriculture">
+      <div class="agriculture__image"></div>
+      <div class="agriculture__text">
+        <h2>Scene 3</h2>
+        <p>Text about agriculture being used where the forest was chopped</p>
       </div>
     </div>
+    
+    <div class="positive">
+      <div class="positive__image"></div>
+      <div class="positive__text">
+        <h2>Scene 4</h2>
+        <p>Text about positive efforts and that it's not too late to save the forest</p>
+      </div>
+    </div>
+
   </body>
 </html>
