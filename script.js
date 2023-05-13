@@ -14,7 +14,7 @@ textElements.forEach((textElement) => {
   observer.observe(textElement);
 });
 
-const bulldozers = document.querySelectorAll('.bulldozer');
+const bulldozers = document.querySelectorAll('.bulldozer-container__bulldozer');
 const bulldozerObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -29,7 +29,7 @@ bulldozers.forEach((bulldozer) => {
   bulldozerObserver.observe(bulldozer);
 });
 
-const tractorElement = document.querySelector('.tractor');
+const tractorElement = document.querySelector('.tractor-container__tractor');
 
 const tractorObserver  = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -43,7 +43,7 @@ const tractorObserver  = new IntersectionObserver(entries => {
 
 tractorObserver .observe(tractorElement);
 
-const treeElements = document.querySelectorAll('.forest img');
+const treeElements = document.querySelectorAll('.forest__tree');
 const treeObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
