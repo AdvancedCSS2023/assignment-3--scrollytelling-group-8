@@ -28,3 +28,32 @@ const bulldozerObserver = new IntersectionObserver((entries) => {
 bulldozers.forEach((bulldozer) => {
   bulldozerObserver.observe(bulldozer);
 });
+
+const tractorElement = document.querySelector('.tractor');
+
+const tractorObserver  = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('tractor-animate');
+    } else {
+      entry.target.classList.remove('tractor-animate');
+    }
+  });
+});
+
+tractorObserver .observe(tractorElement);
+
+const treeElements = document.querySelectorAll('.forest img');
+const treeObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('shake');
+    } else {
+      entry.target.classList.remove('shake');
+    }
+  });
+});
+
+treeElements.forEach((treeElement) => {
+  treeObserver.observe(treeElement);
+});

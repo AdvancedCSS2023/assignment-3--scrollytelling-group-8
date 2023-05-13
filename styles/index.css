@@ -1,25 +1,56 @@
+html {
+  overflow-x: hidden;
+}
+
 /* Set up the overall layout */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(#45bd3a, #08500e);
+  background: linear-gradient(#77a0ec, #08500e);
+  overflow-x: hidden;
+  margin-inline: 20px;
 }
 
 h1 {
   font-size: 4rem;
   text-align: center;
   color: white;
+  margin-top: 5rem;
 }
 
 /* Set up the styles for each section */
 section {
-  height: 100vh;
+  height: 125vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 20rem;
+}
+
+.forest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.forest img {
+  width: 400px;
+  height: 400px;
+}
+
+.shake {
+  animation: shake 3s ease-in-out forwards;
+}
+
+.tree:nth-child(even) {
+  animation-delay: 0.5s;
+  animation-direction: reverse;
+  transform: rotate(-90deg);
 }
 
 .paragraph {
@@ -34,13 +65,10 @@ section {
 }
 
 span {
-  color: white;
   font-weight: 600;
-}
-
-.red {
   color: red;
 }
+
 
 img,
 picture {
@@ -67,8 +95,7 @@ picture {
   position: absolute;
   top: 50%;
   transform: translateX(-50%);
-  transition: transform 4s linear;
-  transition-delay: 2s;
+  transition-delay: 4s;
 }
 
 .bulldozer:nth-child(1) {
@@ -86,6 +113,150 @@ picture {
 .animate {
   animation: bulldozer-move 6s ease-in-out forwards;
 }
+
+.tractor-animate {
+  animation: tractor-move 6s ease-in-out 1.5s forwards;
+}
+
+.tractor-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  overflow: hidden;
+}
+
+.tractor {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 1000px;
+}
+
+.forest2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.forest__tree {
+  position: absolute;
+  inset: 0;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.forest__tree:nth-last-of-type(1) {
+  left: -100px;
+}
+
+.forest__tree:nth-last-of-type(2) {
+  left: -100px;
+}
+
+.forest__tree:nth-last-of-type(2) {
+  left: -250px;
+}
+
+.forest__tree:nth-last-of-type(3) {
+  left: -400px;
+}
+
+.forest__tree:nth-last-of-type(4) {
+  left: -550px;
+}
+
+.forest__tree:nth-last-of-type(5) {
+  left: 100px;
+}
+
+.forest__tree:nth-last-of-type(6) {
+  left: 250px;
+}
+
+.forest__tree:nth-last-of-type(7) {
+  left: 400px;
+}
+
+.forest__tree:nth-last-of-type(8) {
+  left: 550px;
+}
+
+.smoke {
+  position: absolute;
+  inset: 150px 0 0 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  animation: smoke 4s infinite;
+}
+
+.smoke:nth-of-type(1) {
+  left: 100px;
+  animation-delay: 2s;
+}
+
+.smoke:nth-of-type(2) {
+  left: 200px;
+  animation-delay: 3.2s;
+}
+
+.smoke:nth-of-type(3) {
+  left: 300px;
+  animation-delay: 1.4s;
+}
+
+.smoke:nth-of-type(4) {
+  left: -100px;
+  animation-delay: 4.2s;
+}
+
+.smoke:nth-of-type(5) {
+  left: -200px;
+  animation-delay: 1.8s;
+}
+
+.smoke:nth-of-type(6) {
+  left: -300px;
+  animation-delay: 2.34s;
+}
+
+.fire {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  inset: 300px 0 0 0;
+  margin: auto;
+  background: #FF5733;
+  border-radius: 20px;
+  animation: flicker 0.1s infinite alternate;
+}
+
+.fire::before, .fire::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: #FFC300;
+  border-radius: 50%;
+}
+
+.fire::before {
+  top: -30%;
+  left: 10%;
+  animation: rise 1s infinite;
+}
+
+.fire::after {
+  top: -40%;
+  right: 10%;
+  animation: rise 1.5s infinite;
+}
+
 
 @keyframes scroll {
   0% {
@@ -106,5 +277,72 @@ picture {
 
   to {
     transform: translateX(200%);
+  }
+}
+
+@keyframes tractor-move {
+  from {
+    transform: translateX(100px);
+  }
+
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+
+  20% {
+    transform: translateY(-10px) rotate(-10deg);
+  }
+
+  40% {
+    transform: translateY(-5px) rotate(10deg);
+  }
+
+  60% {
+    transform: translateY(-10px) rotate(-10deg);
+  }
+
+  80% {
+    transform: translateY(-5px) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(50px) rotate(90deg);
+  }
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50px, -50px) rotate(720deg);
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
   }
 }
