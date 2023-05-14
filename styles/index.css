@@ -90,11 +90,12 @@
     }
 }
 
-/*# sourceMappingURL=index.css.map */
+
 
 :root {
     --mainblue: #77a0ec;
     --maingreen: #08500e;
+    --grey: #121212;
 }
 
 html {
@@ -109,6 +110,10 @@ body {
     background: linear-gradient(var(--mainblue), var(--maingreen));
     margin-inline: 20px;
     overflow: hidden;
+
+    @media (prefers-color-scheme: dark) {
+        background: var(--grey);
+    }
 }
 
 h1 {
@@ -134,7 +139,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .forest__tree {
@@ -156,6 +161,7 @@ section {
     background-color: white;
     border-radius: 15px;
     padding: 50px;
+    text-align: center;
 }
 
 .text {
@@ -168,6 +174,9 @@ span {
     color: red;
 }
 
+.text__scroll {
+    color: white;
+}
 
 img,
 picture {
@@ -415,3 +424,22 @@ picture {
         animation: none;
     }
 }
+
+@media (orientation: portrait) {
+
+    /* Styles for portrait mode */
+    .portrait-message {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        z-index: 9999;
+    }
+}
+
+/*# sourceMappingURL=index.css.map */

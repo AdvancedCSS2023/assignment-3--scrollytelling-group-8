@@ -4,7 +4,7 @@
 
 What the project does?
 
-This project is about UN goal 15. Which is about protecting, restoring and promoting sustainably manage forest. This is meant for an older audience 35-45 year olds. The website shows the damage we're doing to nature through animations and transitions. Together we can create a better world for all of us.
+This project is about UN goal 15. Which is about protecting, restoring and promoting sustainably manage forest. This is meant for an older audience 35-45 year olds. The website shows the damage we're doing to nature through a scrollytelling experience. Together we can create a better world for all of us.
 
 Why the project is useful?
 
@@ -12,16 +12,20 @@ This project is useful because it draws attention to the damage that human activ
 
 How users can get started with the project?
 
-To get started with the project, users can visit the website and go through the experience by scrolling down the webpage
+1. To get started with the project you can make a new branch from master. You can then improve or change things to the site and at the end you can make pull request that has to be verified to merge the master branch with your branch.
+
+2. If you just want to run the project you can clone the project and open it in Visual Studio Code.
+
+3. To get started with the project, users can visit the website and go through the experience by scrolling down the webpage.
 
 Where users can get help with your project?
 
-If users need help with the project, they can reach out to 1 of the contributors of the project if they have any questions.
+If users need help with the project, they can reach out to 1 of the contributors if they have any questions.
 
 Which technology is used?
 
-The technology used for this project includes HTML, CSS, and SCSS, with some JavaScript used to for intersection observers that play animations when the user scrolls by that section of the page.
+The technology used for this project includes HTML, CSS and SCSS, with some JavaScript used to for intersection observers that play animations when the user scrolls by that section of the page.
 
 The maintains and contributes to the project?
 
-The project is maintained by Sebastian Haugen
+The project was created as a portfolio project in Advanced CSS at NTNU and is maintained by Sebastian Haugen.
