@@ -90,8 +90,6 @@
     }
 }
 
-
-
 :root {
     --mainblue: #77a0ec;
     --maingreen: #08500e;
@@ -419,15 +417,17 @@ picture {
     left: 400px;
 }
 
+.portrait-message {
+    display: none;
+}
+
 @media (prefers-reduced-motion) {
     .forest__tree {
         animation: none;
     }
 }
 
-@media (orientation: portrait) {
-
-    /* Styles for portrait mode */
+@media (max-width: 750px) and (orientation: portrait) {
     .portrait-message {
         display: block;
         position: fixed;
