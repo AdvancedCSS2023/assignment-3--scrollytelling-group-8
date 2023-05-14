@@ -16,6 +16,8 @@ This project is valuable because it raises awareness about the damaging effects 
 
 2. If you only want to run the project, you can clone it using the link https://github.com/AdvancedCSS2023/assignment-3--scrollytelling-group-8.git and open it in Visual Studio Code.
 
+3. You can also go to github pages to see the website https://sebastianhaugen.github.io./
+
 <b>Where users can get help with your project?</b>
 
 If users need help with the project, they can reach out to 1 of the contributors if they have any questions.
